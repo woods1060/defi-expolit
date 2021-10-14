@@ -1,0 +1,13 @@
+#btn {
+  height: 3.25em;
+  display: inline-flex;
+  align-items: center;
+  background-color: rgb(13, 152, 152);
+  text-transform: uppercase;
+  color: white;
+  border-radius: 4px;
+  padding: 0px 2.25em;
+  &:hover {
+    cursor: pointer;
+  }
+}
