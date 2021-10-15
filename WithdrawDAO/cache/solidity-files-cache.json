@@ -35,6 +35,41 @@
         "DAO",
         "WithdrawDAO"
       ]
+    },
+    "/root/github/defi-expolit/WithdrawDAO/contracts/WithdrawDAO.sol": {
+      "lastModificationDate": 1634265140860,
+      "contentHash": "a98b131196f709278d28ce2bd48d9df8",
+      "sourceName": "contracts/WithdrawDAO.sol",
+      "solcConfig": {
+        "version": "0.7.3",
+        "settings": {
+          "optimizer": {
+            "enabled": false,
+            "runs": 200
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [],
+      "versionPragmas": [
+        "^0.7.0"
+      ],
+      "artifacts": [
+        "DAO",
+        "WithdrawDAO"
+      ]
     }
   }
 }
