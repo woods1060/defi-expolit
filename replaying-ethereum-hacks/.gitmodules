@@ -1,3 +1,0 @@
-[submodule "protocols/sushiswap"]
-	path = protocols/sushiswap
-	url = git@github.com:sushiswap/sushiswap.git
