@@ -1,0 +1,65 @@
+{
+  "_format": "hh-sol-artifact-1",
+  "contractName": "IDODOProxyV2",
+  "sourceName": "contracts/interfaces/IDODOProxyV2.sol",
+  "abi": [
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "fromToken",
+          "type": "address"
+        },
+        {
+          "internalType": "address",
+          "name": "toToken",
+          "type": "address"
+        },
+        {
+          "internalType": "uint256",
+          "name": "fromTokenAmount",
+          "type": "uint256"
+        },
+        {
+          "internalType": "uint256",
+          "name": "minReturnAmount",
+          "type": "uint256"
+        },
+        {
+          "internalType": "address[]",
+          "name": "dodoPairs",
+          "type": "address[]"
+        },
+        {
+          "internalType": "uint256",
+          "name": "directions",
+          "type": "uint256"
+        },
+        {
+          "internalType": "bool",
+          "name": "isIncentive",
+          "type": "bool"
+        },
+        {
+          "internalType": "uint256",
+          "name": "deadLine",
+          "type": "uint256"
+        }
+      ],
+      "name": "dodoSwapV1",
+      "outputs": [
+        {
+          "internalType": "uint256",
+          "name": "returnAmount",
+          "type": "uint256"
+        }
+      ],
+      "stateMutability": "payable",
+      "type": "function"
+    }
+  ],
+  "bytecode": "0x",
+  "deployedBytecode": "0x",
+  "linkReferences": {},
+  "deployedLinkReferences": {}
+}

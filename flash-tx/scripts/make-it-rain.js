@@ -102,10 +102,10 @@ async function main() {
   const dxdxFlashloaner = await DydxFlashloaner.deploy(flashlogic.address, borrowed);
   await dxdxFlashloaner.deployed();
   console.log("dYdX_flashloaner deployed to:", dxdxFlashloaner.address);
-  await flashlogic.setDydxFlashloanerSecondOwner(dxdxFlashloaner.address);
+  // await flashlogic.setDydxFlashloanerSecondOwner(dxdxFlashloaner.address);
   console.log('.');
 
-  await exchange.setFlashloanerSecondOwner(flashlogic.address);
+  // await exchange.setFlashloanerSecondOwner(flashlogic.address);
 
 
   console.log("--------------------------- Health Factor Management (AAVE's Lending Pool) ---------------------------");

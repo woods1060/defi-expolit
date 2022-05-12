@@ -1,0 +1,103 @@
+{
+  "_format": "hh-sol-artifact-1",
+  "contractName": "IBancorNetwork",
+  "sourceName": "contracts/interfaces/IBancor.sol",
+  "abi": [
+    {
+      "inputs": [
+        {
+          "internalType": "contract MyIERC20",
+          "name": "_sourceToken",
+          "type": "address"
+        },
+        {
+          "internalType": "contract MyIERC20",
+          "name": "_targetToken",
+          "type": "address"
+        }
+      ],
+      "name": "conversionPath",
+      "outputs": [
+        {
+          "internalType": "contract MyIERC20[]",
+          "name": "",
+          "type": "address[]"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "contract MyIERC20[]",
+          "name": "_path",
+          "type": "address[]"
+        },
+        {
+          "internalType": "uint256",
+          "name": "_amount",
+          "type": "uint256"
+        },
+        {
+          "internalType": "uint256",
+          "name": "_minReturn",
+          "type": "uint256"
+        },
+        {
+          "internalType": "address",
+          "name": "_beneficiary",
+          "type": "address"
+        },
+        {
+          "internalType": "address",
+          "name": "_affiliateAccount",
+          "type": "address"
+        },
+        {
+          "internalType": "uint256",
+          "name": "_affiliateFee",
+          "type": "uint256"
+        }
+      ],
+      "name": "convertByPath",
+      "outputs": [
+        {
+          "internalType": "uint256",
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "stateMutability": "payable",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "contract MyIERC20[]",
+          "name": "_path",
+          "type": "address[]"
+        },
+        {
+          "internalType": "uint256",
+          "name": "_amount",
+          "type": "uint256"
+        }
+      ],
+      "name": "rateByPath",
+      "outputs": [
+        {
+          "internalType": "uint256",
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    }
+  ],
+  "bytecode": "0x",
+  "deployedBytecode": "0x",
+  "linkReferences": {},
+  "deployedLinkReferences": {}
+}

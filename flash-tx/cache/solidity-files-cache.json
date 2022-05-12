@@ -1,0 +1,852 @@
+{
+  "_format": "hh-sol-cache-2",
+  "files": {
+    "/root/github/defi-expolit/flash-tx/contracts/core/Flashloaner.sol": {
+      "lastModificationDate": 1652324635289,
+      "contentHash": "e3e836384cbbde9ee866e58198eef310",
+      "sourceName": "contracts/core/Flashloaner.sol",
+      "solcConfig": {
+        "version": "0.8.0",
+        "settings": {
+          "optimizer": {
+            "enabled": false,
+            "runs": 200
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [
+        "@uniswap/v2-periphery/contracts/interfaces/IUniswapV2Router02.sol",
+        "@uniswap/v2-periphery/contracts/interfaces/IWETH.sol",
+        "@openzeppelin/contracts/access/Ownable.sol",
+        "../interfaces/IBancor.sol",
+        "../interfaces/IAaveProtocolDataProvider.sol",
+        "../interfaces/ICroDefiSwapRouter02.sol",
+        "../interfaces/MyILendingPool.sol",
+        "../interfaces/IDODOProxyV2.sol",
+        "../interfaces/IBalancerV1.sol",
+        "../interfaces/MyIERC20.sol",
+        "../interfaces/ICurve.sol",
+        "../periphery/Helpers.sol",
+        "../periphery/Exchange.sol",
+        "hardhat/console.sol"
+      ],
+      "versionPragmas": [
+        "^0.8.0"
+      ],
+      "artifacts": [
+        "Flashloaner"
+      ]
+    },
+    "/root/github/defi-expolit/flash-tx/node_modules/@uniswap/v2-periphery/contracts/interfaces/IUniswapV2Router02.sol": {
+      "lastModificationDate": 1650537448361,
+      "contentHash": "3fd36426274a5b35f7e702f87ba08a8e",
+      "sourceName": "@uniswap/v2-periphery/contracts/interfaces/IUniswapV2Router02.sol",
+      "solcConfig": {
+        "version": "0.8.0",
+        "settings": {
+          "optimizer": {
+            "enabled": false,
+            "runs": 200
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [
+        "./IUniswapV2Router01.sol"
+      ],
+      "versionPragmas": [
+        ">=0.6.2"
+      ],
+      "artifacts": [
+        "IUniswapV2Router02"
+      ]
+    },
+    "/root/github/defi-expolit/flash-tx/node_modules/@uniswap/v2-periphery/contracts/interfaces/IWETH.sol": {
+      "lastModificationDate": 1652326165903,
+      "contentHash": "f7c787ba02513cabe7d66b10d06369f2",
+      "sourceName": "@uniswap/v2-periphery/contracts/interfaces/IWETH.sol",
+      "solcConfig": {
+        "version": "0.8.0",
+        "settings": {
+          "optimizer": {
+            "enabled": false,
+            "runs": 200
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [],
+      "versionPragmas": [
+        ">=0.5.0"
+      ],
+      "artifacts": [
+        "IWETH"
+      ]
+    },
+    "/root/github/defi-expolit/flash-tx/node_modules/@openzeppelin/contracts/access/Ownable.sol": {
+      "lastModificationDate": 1650537448357,
+      "contentHash": "4fe56b59ced59d87df6b796758f62895",
+      "sourceName": "@openzeppelin/contracts/access/Ownable.sol",
+      "solcConfig": {
+        "version": "0.8.0",
+        "settings": {
+          "optimizer": {
+            "enabled": false,
+            "runs": 200
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [
+        "../utils/Context.sol"
+      ],
+      "versionPragmas": [
+        "^0.8.0"
+      ],
+      "artifacts": [
+        "Ownable"
+      ]
+    },
+    "/root/github/defi-expolit/flash-tx/contracts/interfaces/IBancor.sol": {
+      "lastModificationDate": 1650537448361,
+      "contentHash": "960dcd502f4e4668624217edabd5e6b0",
+      "sourceName": "contracts/interfaces/IBancor.sol",
+      "solcConfig": {
+        "version": "0.8.0",
+        "settings": {
+          "optimizer": {
+            "enabled": false,
+            "runs": 200
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [
+        "./MyIERC20.sol"
+      ],
+      "versionPragmas": [
+        "^0.8.0"
+      ],
+      "artifacts": [
+        "IBancorNetwork",
+        "IContractRegistry"
+      ]
+    },
+    "/root/github/defi-expolit/flash-tx/contracts/interfaces/IAaveProtocolDataProvider.sol": {
+      "lastModificationDate": 1650537448361,
+      "contentHash": "c4343d666709452553351c1725622c94",
+      "sourceName": "contracts/interfaces/IAaveProtocolDataProvider.sol",
+      "solcConfig": {
+        "version": "0.8.0",
+        "settings": {
+          "optimizer": {
+            "enabled": false,
+            "runs": 200
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [],
+      "versionPragmas": [
+        "^0.8.0"
+      ],
+      "artifacts": [
+        "IAaveProtocolDataProvider"
+      ]
+    },
+    "/root/github/defi-expolit/flash-tx/contracts/interfaces/ICroDefiSwapRouter02.sol": {
+      "lastModificationDate": 1650537448361,
+      "contentHash": "9e76311637fc4af9c39a91bd30c1650f",
+      "sourceName": "contracts/interfaces/ICroDefiSwapRouter02.sol",
+      "solcConfig": {
+        "version": "0.8.0",
+        "settings": {
+          "optimizer": {
+            "enabled": false,
+            "runs": 200
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [],
+      "versionPragmas": [
+        "^0.8.0"
+      ],
+      "artifacts": [
+        "ICroDefiSwapRouter02"
+      ]
+    },
+    "/root/github/defi-expolit/flash-tx/contracts/interfaces/MyILendingPool.sol": {
+      "lastModificationDate": 1650537448361,
+      "contentHash": "2ca07d4ba3c6aebb2aafb3ae9f22c015",
+      "sourceName": "contracts/interfaces/MyILendingPool.sol",
+      "solcConfig": {
+        "version": "0.8.0",
+        "settings": {
+          "optimizer": {
+            "enabled": false,
+            "runs": 200
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [],
+      "versionPragmas": [
+        "^0.8.0"
+      ],
+      "artifacts": [
+        "MyILendingPool"
+      ]
+    },
+    "/root/github/defi-expolit/flash-tx/contracts/interfaces/IDODOProxyV2.sol": {
+      "lastModificationDate": 1650537448361,
+      "contentHash": "356b13d970c7c1951e19c7943e2822e4",
+      "sourceName": "contracts/interfaces/IDODOProxyV2.sol",
+      "solcConfig": {
+        "version": "0.8.0",
+        "settings": {
+          "optimizer": {
+            "enabled": false,
+            "runs": 200
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [],
+      "versionPragmas": [
+        "^0.8.0"
+      ],
+      "artifacts": [
+        "IDODOProxyV2"
+      ]
+    },
+    "/root/github/defi-expolit/flash-tx/contracts/interfaces/IBalancerV1.sol": {
+      "lastModificationDate": 1650537448361,
+      "contentHash": "c26f3f4ae01d9b0d8c3b6f0673136902",
+      "sourceName": "contracts/interfaces/IBalancerV1.sol",
+      "solcConfig": {
+        "version": "0.8.0",
+        "settings": {
+          "optimizer": {
+            "enabled": false,
+            "runs": 200
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [],
+      "versionPragmas": [
+        "^0.8.0"
+      ],
+      "artifacts": [
+        "IBalancerV1"
+      ]
+    },
+    "/root/github/defi-expolit/flash-tx/contracts/interfaces/MyIERC20.sol": {
+      "lastModificationDate": 1650537448361,
+      "contentHash": "8e42d0fcd5d1c99ce8cc35e9c75320be",
+      "sourceName": "contracts/interfaces/MyIERC20.sol",
+      "solcConfig": {
+        "version": "0.8.0",
+        "settings": {
+          "optimizer": {
+            "enabled": false,
+            "runs": 200
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [],
+      "versionPragmas": [
+        "^0.8.0"
+      ],
+      "artifacts": [
+        "MyIERC20"
+      ]
+    },
+    "/root/github/defi-expolit/flash-tx/contracts/interfaces/ICurve.sol": {
+      "lastModificationDate": 1650537448361,
+      "contentHash": "56c20a6f780d03486204b31bddfeb464",
+      "sourceName": "contracts/interfaces/ICurve.sol",
+      "solcConfig": {
+        "version": "0.8.0",
+        "settings": {
+          "optimizer": {
+            "enabled": false,
+            "runs": 200
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [],
+      "versionPragmas": [
+        "^0.8.0"
+      ],
+      "artifacts": [
+        "ICurve"
+      ]
+    },
+    "/root/github/defi-expolit/flash-tx/contracts/periphery/Helpers.sol": {
+      "lastModificationDate": 1650537448361,
+      "contentHash": "00cc9d97dc6eaf66137c1c5093e87d03",
+      "sourceName": "contracts/periphery/Helpers.sol",
+      "solcConfig": {
+        "version": "0.8.0",
+        "settings": {
+          "optimizer": {
+            "enabled": false,
+            "runs": 200
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [
+        "hardhat/console.sol"
+      ],
+      "versionPragmas": [
+        "^0.8.0"
+      ],
+      "artifacts": [
+        "Helpers"
+      ]
+    },
+    "/root/github/defi-expolit/flash-tx/contracts/periphery/Exchange.sol": {
+      "lastModificationDate": 1652324520561,
+      "contentHash": "4e048b348188ac474bbc1a42fe20c568",
+      "sourceName": "contracts/periphery/Exchange.sol",
+      "solcConfig": {
+        "version": "0.8.0",
+        "settings": {
+          "optimizer": {
+            "enabled": false,
+            "runs": 200
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [
+        "@uniswap/v2-periphery/contracts/interfaces/IUniswapV2Router02.sol",
+        "@uniswap/v2-periphery/contracts/interfaces/IWETH.sol",
+        "@openzeppelin/contracts/access/Ownable.sol",
+        "../interfaces/IBancor.sol",
+        "../interfaces/IAaveProtocolDataProvider.sol",
+        "../interfaces/ICroDefiSwapRouter02.sol",
+        "../interfaces/MyILendingPool.sol",
+        "../interfaces/IBalancerV1.sol",
+        "../interfaces/IDODOProxyV2.sol",
+        "../interfaces/ICurve.sol",
+        "../interfaces/MyIERC20.sol",
+        "../libraries/MySafeERC20.sol",
+        "./Helpers.sol",
+        "hardhat/console.sol"
+      ],
+      "versionPragmas": [
+        "^0.8.0"
+      ],
+      "artifacts": [
+        "Exchange"
+      ]
+    },
+    "/root/github/defi-expolit/flash-tx/node_modules/hardhat/console.sol": {
+      "lastModificationDate": 1650537448121,
+      "contentHash": "cc4777addd464ea56fa35b1c45df0591",
+      "sourceName": "hardhat/console.sol",
+      "solcConfig": {
+        "version": "0.8.0",
+        "settings": {
+          "optimizer": {
+            "enabled": false,
+            "runs": 200
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [],
+      "versionPragmas": [
+        ">=0.4.22 <0.9.0"
+      ],
+      "artifacts": [
+        "console"
+      ]
+    },
+    "/root/github/defi-expolit/flash-tx/node_modules/@uniswap/v2-periphery/contracts/interfaces/IUniswapV2Router01.sol": {
+      "lastModificationDate": 1650537448361,
+      "contentHash": "95d8729b2c698dc663322167b3c085fe",
+      "sourceName": "@uniswap/v2-periphery/contracts/interfaces/IUniswapV2Router01.sol",
+      "solcConfig": {
+        "version": "0.8.0",
+        "settings": {
+          "optimizer": {
+            "enabled": false,
+            "runs": 200
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [],
+      "versionPragmas": [
+        ">=0.6.2"
+      ],
+      "artifacts": [
+        "IUniswapV2Router01"
+      ]
+    },
+    "/root/github/defi-expolit/flash-tx/node_modules/@openzeppelin/contracts/utils/Context.sol": {
+      "lastModificationDate": 1650537448357,
+      "contentHash": "851485d5b925529b1a2f34a0be077891",
+      "sourceName": "@openzeppelin/contracts/utils/Context.sol",
+      "solcConfig": {
+        "version": "0.8.0",
+        "settings": {
+          "optimizer": {
+            "enabled": false,
+            "runs": 200
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [],
+      "versionPragmas": [
+        "^0.8.0"
+      ],
+      "artifacts": [
+        "Context"
+      ]
+    },
+    "/root/github/defi-expolit/flash-tx/contracts/libraries/MySafeERC20.sol": {
+      "lastModificationDate": 1650537448361,
+      "contentHash": "acebdf226ecd1d5e6a7c722a93b7345d",
+      "sourceName": "contracts/libraries/MySafeERC20.sol",
+      "solcConfig": {
+        "version": "0.8.0",
+        "settings": {
+          "optimizer": {
+            "enabled": false,
+            "runs": 200
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [
+        "../interfaces/MyIERC20.sol",
+        "./MyAddress.sol"
+      ],
+      "versionPragmas": [
+        "^0.8.0"
+      ],
+      "artifacts": [
+        "MySafeERC20"
+      ]
+    },
+    "/root/github/defi-expolit/flash-tx/contracts/libraries/MyAddress.sol": {
+      "lastModificationDate": 1650537448361,
+      "contentHash": "212e15424b04ebf1070d36d4c3ede76f",
+      "sourceName": "contracts/libraries/MyAddress.sol",
+      "solcConfig": {
+        "version": "0.8.0",
+        "settings": {
+          "optimizer": {
+            "enabled": false,
+            "runs": 200
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [],
+      "versionPragmas": [
+        ">=0.6.2 <=0.8.0"
+      ],
+      "artifacts": [
+        "Address"
+      ]
+    },
+    "/root/github/defi-expolit/flash-tx/contracts/periphery/DyDxFlashloaner.sol": {
+      "lastModificationDate": 1650537448361,
+      "contentHash": "920acda66e7ff867f84a6af9a39a0c1c",
+      "sourceName": "contracts/periphery/DyDxFlashloaner.sol",
+      "solcConfig": {
+        "version": "0.8.0",
+        "settings": {
+          "optimizer": {
+            "enabled": false,
+            "runs": 200
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [
+        "@uniswap/v2-periphery/contracts/interfaces/IWETH.sol",
+        "@openzeppelin/contracts/access/Ownable.sol",
+        "../interfaces/MyIERC20.sol",
+        "./Helpers.sol",
+        "hardhat/console.sol"
+      ],
+      "versionPragmas": [
+        "^0.8.0"
+      ],
+      "artifacts": [
+        "Account",
+        "Actions",
+        "DyDxFlashloaner",
+        "ICallee",
+        "ISoloMargin",
+        "Types"
+      ]
+    },
+    "/root/github/defi-expolit/flash-tx/contracts/core/RevengeOfTheFlash.sol": {
+      "lastModificationDate": 1652324673719,
+      "contentHash": "1325887774ea902538e33dccabade7de",
+      "sourceName": "contracts/core/RevengeOfTheFlash.sol",
+      "solcConfig": {
+        "version": "0.8.0",
+        "settings": {
+          "optimizer": {
+            "enabled": false,
+            "runs": 200
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [
+        "@uniswap/v2-periphery/contracts/interfaces/IUniswapV2Router02.sol",
+        "@openzeppelin/contracts/access/Ownable.sol",
+        "../interfaces/IAaveProtocolDataProvider.sol",
+        "../interfaces/ICroDefiSwapRouter02.sol",
+        "../interfaces/IWETHgateway.sol",
+        "../interfaces/MyIERC20.sol",
+        "../interfaces/ICurve.sol",
+        "../libraries/MySafeERC20.sol",
+        "../periphery/Helpers.sol",
+        "../periphery/Exchange.sol",
+        "hardhat/console.sol"
+      ],
+      "versionPragmas": [
+        "^0.8.0"
+      ],
+      "artifacts": [
+        "RevengeOfTheFlash"
+      ]
+    },
+    "/root/github/defi-expolit/flash-tx/contracts/interfaces/IWETHgateway.sol": {
+      "lastModificationDate": 1650537448361,
+      "contentHash": "264175b9d139c0eff2a09f6b60bac5ea",
+      "sourceName": "contracts/interfaces/IWETHgateway.sol",
+      "solcConfig": {
+        "version": "0.8.0",
+        "settings": {
+          "optimizer": {
+            "enabled": false,
+            "runs": 200
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [],
+      "versionPragmas": [
+        "^0.8.0"
+      ],
+      "artifacts": [
+        "IWETHgateway"
+      ]
+    },
+    "/root/github/defi-expolit/flash-tx/contracts/interfaces/IWBTC.sol": {
+      "lastModificationDate": 1650537448361,
+      "contentHash": "fb032e7d7c8f4509191d87e7bd1555c5",
+      "sourceName": "contracts/interfaces/IWBTC.sol",
+      "solcConfig": {
+        "version": "0.8.0",
+        "settings": {
+          "optimizer": {
+            "enabled": false,
+            "runs": 200
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [],
+      "versionPragmas": [
+        "^0.8.0"
+      ],
+      "artifacts": [
+        "IWBTC"
+      ]
+    }
+  }
+}

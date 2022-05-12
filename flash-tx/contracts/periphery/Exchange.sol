@@ -52,9 +52,9 @@ contract Exchange is Ownable, Helpers {
 
     receive() external payable {}
 
-    function setFlashloanerSecondOwner(address _flashloaner) external onlyOwner {
-        _setSecondaryOwner(_flashloaner);
-    }
+    // function setFlashloanerSecondOwner(address _flashloaner) external onlyOwner {
+    //     _setSecondaryOwner(_flashloaner);
+    // }
 
 
     function getUserHealthFactor_aave(address _user) external {

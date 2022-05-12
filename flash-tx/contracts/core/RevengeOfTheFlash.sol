@@ -48,6 +48,10 @@ contract RevengeOfTheFlash is Ownable, Helpers {
     address revengeOfTheFlash;
     address offchainRelayer;
 
+    modifier onlySecondaryOwner {
+
+        _;
+    }
 
 
     function executeCont() public onlySecondaryOwner {

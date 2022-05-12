@@ -61,11 +61,16 @@ contract Flashloaner is Ownable, Helpers {
         exchange = _myExchange;
     }
 
-    function setDydxFlashloanerSecondOwner(address _dydxFlashloaner) external onlyOwner {
-        _setSecondaryOwner(_dydxFlashloaner);
-    }
+    // function setDydxFlashloanerSecondOwner(address _dydxFlashloaner) external onlyOwner {
+    //     _setSecondaryOwner(_dydxFlashloaner);
+    // }
 
     receive() external payable {}
+
+    modifier onlySecondaryOwner {
+
+        _;
+    }
 
 
     function execute(uint _borrowed) external onlySecondaryOwner {
